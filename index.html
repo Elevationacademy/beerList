@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  
+  <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
+  <script type="text/javascript" src="node_modules/backbone/backbone.js"></script>
+  <title>BeerList</title>
 </head>
 <body>
 
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="page-header">
+        <h1>BeerList</h1>
+      </div>
+
+      <div class="beersList">
+      </div>
+
+      <form class="beer-form">
+        <h3>Add a New Beer</h3>
+
+        <div class="form-group">
+          <input type="text" id="beer-name" class="form-control" placeholder="Beer Name">
+          </input>
+          <input type="text" id="beer-style" class="form-control" placeholder="Beer Style">
+          </input>
+          <input type="text" id="beer-abv" class="form-control" placeholder="Beer ABV %">
+          </input>
+          <input type="text" id="beer-image" class="form-control" placeholder="Beer Image URL">
+          </input>
+        </div>
+
+      </form>
+        <button class="btn btn-primary add-beer">Add Beer</button>
+
+    </div>
+  </div>
+
+
+<script id="beer-template" type="text/x-handlebars/template">
+  <div class="beer row">
+
+    <div class="col-md-2">
+      <img src="{{image}}" width="100px" style="margin-bottom: 16px"/>
+    </div>
+
+    <div class="col-md-10">
+      <div class="view">
+        <label>{{name}}</label>
+      </div>
+      <div class="edit">
+        <input class="editName" value="{{name}}">
+      </div>
+      <p>This is a <strong>{{style}} </strong>type of beer that contains <strong>{{abv}}% alcohol</strong>.</p>
+    </div>
+
+  </div> 
+</script>
+
+<script type="text/javascript" src="models/BeerModel.js"></script>
+<script type="text/javascript" src="collections/BeerCollection.js"></script>
+<script type="text/javascript" src="views/AppView.js"></script>
+<script type="text/javascript" src="views/BeerView.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>

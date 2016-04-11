@@ -1,0 +1,19 @@
+p {
+  vertical-align: middle
+}
+
+.edit {
+  display: none;
+}
+
+.editing {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.view {
+  display: block;
+}
