@@ -13,3 +13,7 @@ p {
 .hidden {
   display: none;
 }
+
+.view {
+  display: block;
+}
