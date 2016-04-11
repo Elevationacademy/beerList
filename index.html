@@ -21,6 +21,7 @@
     </form>
   </div>
   <div class="container">
+    <button type="button" class="btn btn-primary sort">Sort By Ratings</button>
     <div class="row">
       <div id="beer-container" class="col-md-4 col-md-offset-4"></div>
     </div>
@@ -44,7 +45,7 @@
               <option value=3>3</option>
               <option value=4>4</option>
               <option value=5>5</option>
-              </select><button class="btn btn-primary rate-submit">rate</button> average rating: <span class="avg-rating">0</span>
+              </select><button class="btn btn-primary rate-submit">rate</button> average rating: <span class="avg-rating">{{avgRate}}</span>
       </li>
       <li>
         <img src="{{ image_url }}">
