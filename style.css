@@ -1,0 +1,6 @@
+.beer-card li.editing .name-edit {
+  display: block;
+}
+.beer-card li .name-edit {
+  display: none;
+}
