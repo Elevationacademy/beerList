@@ -13,3 +13,7 @@ li p {
    text-transform: capitalize;
    margin-top: 0.5rem;
 }
+
+.rate-btn {
+   margin-left: 1rem;
+}
