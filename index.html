@@ -5,6 +5,7 @@
   
   <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script type="text/javascript" src="node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
   <script type="text/javascript" src="node_modules/backbone/backbone.js"></script>
@@ -44,14 +45,22 @@
 
 <script id="beer-template" type="text/x-handlebars/template">
   <div class="beer row">
+
     <div class="col-md-2">
-    <img src="{{image}}" width="100px" style="margin-bottom: 16px"/>
+      <img src="{{image}}" width="100px" style="margin-bottom: 16px"/>
     </div>
+
     <div class="col-md-10">
-    <p><strong>{{name}}</strong> is a <strong>{{style}} </strong>type of beer that contains <strong>{{abv}}% alcohol</strong>.</p>
-    <button class="btn btn-danger remove-beer">Remove Beer</button>
+      <div class="view">
+        <label>{{name}}</label>
+      </div>
+      <div class="edit">
+        <input class="edit" value="{{name}}">
+      </div>
+      <p>This is a <strong>{{style}} </strong>type of beer that contains <strong>{{abv}}% alcohol</strong>.</p>
     </div>
-  </div>
+
+  </div> 
 </script>
 
 <script type="text/javascript" src="models/BeerModel.js"></script>
