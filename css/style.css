@@ -17,3 +17,7 @@ li p {
 .rate-btn {
    margin-left: 1rem;
 }
+
+.value {
+   display: block;
+}

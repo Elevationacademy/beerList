@@ -7,8 +7,6 @@ var AppView = Backbone.View.extend({
 
    initialize: function () {
       this.$list = this.$('.beers-list');
-      console.log(this.model.get('beers'));
-      // debugger;
       this.listenTo(this.model.get('beers'), 'add', this.render);
    },
 
