@@ -38,6 +38,15 @@
         <p>{{style}} - {{abv}}%</p>
       </li>
       <li>
+        rate: <select class="rating-select">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              </select><button class="btn btn-primary rate-submit">rate</button> average rating: <span class="avg-rating">0</span>
+      </li>
+      <li>
         <img src="{{ image_url }}">
       </li>
     </ul>

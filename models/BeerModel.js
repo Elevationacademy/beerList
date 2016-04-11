@@ -3,6 +3,8 @@ var BeerModel = Backbone.Model.extend({
     name: '',
     style: '',
     abv: 0,
-    image_url: ''
+    image_url: '',
+    ratings: [],
+    avgRate: 0
   }
 });
