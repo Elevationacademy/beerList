@@ -1,24 +1,24 @@
 var BeerView = Backbone.View.extend({
-  template: $('#beer-template'),
-
   className: 'beer',
-
+  
   events: {
-  'click .remove-beer': 'removeBeer'
+    'click .remove-beer': 'removeBeer'
+  },
+
+  template: Handlebars.compile($('#beer-template').html()),
+
+  initialize: function () {
+    this.listenTo(this.model, 'destroy', this.remove)
   },
 
   render: function() {
-    var template = Handlebars.compile(this.template.html());
-    this.$el.append(template(this.model.toJSON()));
+    this.$el.html(this.template(this.model.toJSON()));
 
     return this;
   },
 
   removeBeer: function () {
-    console.log(this.model.get('beers'));
-    //this.model.get('beers').remove();
-    this.remove();
+    this.model.destroy();
   }
     
-
-})
+});

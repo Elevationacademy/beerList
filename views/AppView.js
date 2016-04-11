@@ -1,32 +1,33 @@
 var AppView = Backbone.View.extend({
-  el: 'body',
+  el: $('body'),
 
   events: {
-    'click .add-beer': 'addBeer',
+    'click .add-beer': 'addBeer'
   },
 
   initialize: function () {
-    this.listenTo(this.model.get('beers'), 'add', this.renderBeer);
-
+    // this.listenTo(this.model.get('beers'), 'add', this.renderBeer);
     this.$beers = this.$('.beersList'); 
+
+    this.listenTo(beers, 'add', this.renderBeer)
   },
 
-  addBeer: function (e) {
-    e.preventDefault();
-
-    // Create a new beer model:
-    var beer = new BeerModel ( {
+  addBeer: function () {
+    beers.add({
       name: $('#beer-name').val(),
       abv: $('#beer-abv').val(),
       style: $('#beer-style').val(),
       image: $('#beer-image').val()
     });
-    // Add the new beer model to the appModel's 'beer' collection
-    this.model.get('beers').add(beer);
+   
+    this.$('#beer-name').val('');
+    this.$('#beer-abv').val('');
+    this.$('#beer-style').val('');
+    this.$('#beer-image').val('');
   },
 
-  renderBeer: function (beer) {
-    var view = new BeerView ({ model: beer});
+  renderBeer: function (beerModel) {
+    var view = new BeerView ({ model: beerModel});
 
     this.$beers.append(view.render().el);
   }

@@ -1,2 +1,3 @@
-var appModel = new AppModel();
-var appView = new AppView({ model: appModel });
+// var appModel = new AppModel();
+var beers = new BeerCollection();
+var appView = new AppView();
