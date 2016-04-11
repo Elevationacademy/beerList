@@ -1,0 +1,25 @@
+{
+  "name": "beerlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temereru/beerList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Temereru/beerList/issues"
+  },
+  "homepage": "https://github.com/Temereru/beerList#readme",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "bootstrap": "^3.3.6",
+    "handlebars": "^4.0.5",
+    "jquery": "^2.2.3"
+  }
+}
