@@ -1,0 +1,11 @@
+.image{
+  height:150px;
+}
+
+.toggle{
+  display:none;
+}
+
+.show{
+  display: block;
+}

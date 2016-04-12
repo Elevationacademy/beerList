@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Beer List</title>
 </head>
 <body>
+<input id="name" placeholder="name"/><br>
+<input id="style" placeholder="style"/><br>
+<input id="abv" placeholder="abv"/><br>
+<input id="image" placeholder="image url"/><br>
+<select id="rating">
+  <option>0</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select><br>
+<button class="submit">submit</button>
 
+<section class="displayBeer">
+  
+</section>
+
+<script id="post-template" type="text/x-handlebars-template">
+  <div class="review">
+    <h2>{{name}}</h2>
+    {{style}} {{abv}}<br>
+    Rating: {{rating}}<br>
+    <img class="image" src="{{url}}"></img>
+    <a class="remove">remove</a>  <a class="edit">edit</a>
+    <div class="toggle">
+      <input id="name1" value="{{name}}" placeholder="name"/><br>
+      <input id="style1" value="{{style}}" placeholder="style"/><br>
+      <input id="abv1" value="{{abv}}" placeholder="abv"/><br>
+      <input id="image1" value="{{url}}" placeholder="url"/><br>
+      <button class="submit1">submit</button>
+    </div>
+  </div>
+</script>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+<script src="node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
+<script src="node_modules/backbone/backbone-min.js"></script>
+<script src="models/BeerModel.js"></script>
+<script src="collections/BeerCollection.js"></script>
+<script src="views/BeerView.js"></script>
+<script src="views/AppView.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 </body>
 </html>
