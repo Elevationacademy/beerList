@@ -35,18 +35,17 @@ var BeerView = Backbone.View.extend({
     }
   },
 
-  // Close the `"editing"` mode, saving changes to the todo.
+  // Close the "editing" mode, saving changes to the beer.
   close: function () {
     var value = this.$nameInput.val();
 
-    if (!this.$el.hasClass('editing')) {
+    if (!this.model.get('edit_mode')) {
       return;
     }
 
     this.model.set('name', value);
     this.model.set('edit_mode', false);
   },
-
 
   render: function () {
     this.$el.html(this.template(this.model.toJSON()));
